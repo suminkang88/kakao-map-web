@@ -4,9 +4,7 @@ export default function KakaoMap() {
   useEffect(() => {
     // SDK 스크립트 로드
     const script = document.createElement("script");
-    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${
-      import.meta.env.VITE_KAKAO_MAP_API_KEY
-    }&autoload=false`;
+    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.REACT_APP_KAKAO_APP_KEY}&autoload=false`;
     script.async = true;
     document.head.appendChild(script);
 
